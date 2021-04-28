@@ -14,18 +14,30 @@ const assertArraysEqual = (actual, expected) => {
   return true;
 };
 
+// const without = (source, itemsToRemove) => {
+//   let goodCandy = source;
+//   for (let i = 0; i < source.length; i++) {
+//     for (let j = 0; j < itemsToRemove.length; j++) {
+//       if (source[i] === itemsToRemove[j]) {
+//         goodCandy.splice(i, 1);
+//       }
+//     }
+//   }
+//   // console.log(goodCandy);
+//   return goodCandy;
+// };
+
 const without = (source, itemsToRemove) => {
-  let goodCandy = source;
-  for (let i = 0; i < source.length; i++) {
-    for (let j = 0; j < itemsToRemove.length; j++) {
-      if (source[i] === itemsToRemove[j]) {
-        goodCandy.splice(i, 1);
-      }
-    }
+  let newArray = source;
+
+  for (let i = 0; i < itemsToRemove.length; i++) {
+    newArray = newArray.filter(items => {
+      return (items !== itemsToRemove[i])
+    })
   }
-  // console.log(goodCandy);
-  return goodCandy;
-};
+  console.log(newArray);
+  return newArray;
+}
 
 without([1, 2, 3], [1]); // => [2, 3]
 without(["1", "2", "3"], [1, 2, "3"]); // => ["1", "2"]
