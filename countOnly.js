@@ -8,21 +8,36 @@ const assertEqual = function(actual, expected) {
 };
 
 
-const countOnly = (allItems, itemsToCount) => {
-  let newObj = {};
+// const countOnly = (allItems, itemsToCount) => {
+//   let newObj = {};
 
-  for (let item in itemsToCount) {
+//   for (let item in itemsToCount) {
+//     if (itemsToCount[item]) {
+//       for (let i = 0; i < allItems.length; i++) {
+//         if (item === allItems[i]) {
+//           if (newObj[item] === undefined) {
+//             newObj[item] = 1;
+//           } else newObj[item] += 1;
+//         }
+//       }
+//     }
+//   }
+//   return newObj;
+// }
+
+const countOnly = (allItems, itemsToCount) => {
+  let results = {};
+
+  for (let item of allItems) {
     if (itemsToCount[item]) {
-      for (let i = 0; i < allItems.length; i++) {
-        if (item === allItems[i]) {
-          if (newObj[item] === undefined) {
-            newObj[item] = 1;
-          } else newObj[item] += 1;
-        }
+      if (results[item]) {
+        results[item] += 1;
+      } else {
+        results[item] = 1;
       }
     }
   }
-  return newObj;
+  return results;
 }
 
 const firstNames = [
