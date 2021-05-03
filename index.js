@@ -9,7 +9,6 @@ const flatten = require('./flatten');
 const map = require('./map');
 const pigLatin = require('./pig-latin');
 const reverse = require('./reverse');
-const swapper = require('./swapper');
 const takeUntil = require('./takeUntil');
 const without = require('./without');
 
@@ -25,7 +24,6 @@ module.exports = {
   map,
   pigLatin,
   reverse,
-  swapper,
   takeUntil,
   without
 };
