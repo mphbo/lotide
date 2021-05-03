@@ -1,18 +1,18 @@
-const assertArraysEqual = (actual, expected) => {
-  if (actual.length !== expected.length) {
-    console.log('😡😡😡 The Arrays do not match!');
-    return false;
-  } else {
-    for (let i = 0; i < actual.length; i++) {
-      if (actual[i] !== expected[i]) {
-        console.log('😡😡😡 The Arrays do not match!');
-        return false;
-      }
-    }
-  }
-  console.log('😀😀😀 The Arrays do match!');
-  return true;
-};
+// const assertArraysEqual = (actual, expected) => {
+//   if (actual.length !== expected.length) {
+//     console.log('😡😡😡 The Arrays do not match!');
+//     return false;
+//   } else {
+//     for (let i = 0; i < actual.length; i++) {
+//       if (actual[i] !== expected[i]) {
+//         console.log('😡😡😡 The Arrays do not match!');
+//         return false;
+//       }
+//     }
+//   }
+//   console.log('😀😀😀 The Arrays do match!');
+//   return true;
+// };
 
 const flatten = array => {
   let flattenedArray = [];
@@ -28,5 +28,7 @@ const flatten = array => {
   console.log(flattenedArray);
 };
 
+module.exports = flatten;
 
-flatten([1, 2, [3, 4], 5, [6]]);
+
+// flatten([1, 2, [3, 4], 5, [6]]);

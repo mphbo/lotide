@@ -1,18 +1,18 @@
-const assertArraysEqual = (actual, expected) => {
-  if (actual.length !== expected.length) {
-    console.log('😡😡😡 The Arrays do not match!');
-    return false;
-  } else {
-    for (let i = 0; i < actual.length; i++) {
-      if (actual[i] !== expected[i]) {
-        console.log('😡😡😡 The Arrays do not match!');
-        return false;
-      }
-    }
-  }
-  console.log('😀😀😀 The Arrays do match!');
-  return true;
-};
+// const assertArraysEqual = (actual, expected) => {
+//   if (actual.length !== expected.length) {
+//     console.log('😡😡😡 The Arrays do not match!');
+//     return false;
+//   } else {
+//     for (let i = 0; i < actual.length; i++) {
+//       if (actual[i] !== expected[i]) {
+//         console.log('😡😡😡 The Arrays do not match!');
+//         return false;
+//       }
+//     }
+//   }
+//   console.log('😀😀😀 The Arrays do match!');
+//   return true;
+// };
 
 // const without = (source, itemsToRemove) => {
 //   let goodCandy = source;
@@ -37,10 +37,12 @@ const without = (source, itemsToRemove) => {
   }
   console.log(newArray);
   return newArray;
-}
+};
 
-without([1, 2, 3], [1]); // => [2, 3]
-without(["1", "2", "3"], [1, 2, "3"]); // => ["1", "2"]
+module.exports = without;
 
-assertArraysEqual(without([1, 2, 3], [1]), [2, 3]);
-assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]);
+// without([1, 2, 3], [1]); // => [2, 3]
+// without(["1", "2", "3"], [1, 2, "3"]); // => ["1", "2"]
+
+// assertArraysEqual(without([1, 2, 3], [1]), [2, 3]);
+// assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]);

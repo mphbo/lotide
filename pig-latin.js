@@ -6,8 +6,10 @@ const pigLatin = function(string) {
   return newString;
 };
 
-let sentence = '';
-for (let i = 2; i < process.argv.length; i++) {
-  sentence += pigLatin(process.argv[i]) + ' ';
-}
-console.log(sentence);
+module.exports = pigLatin;
+
+// let sentence = '';
+// for (let i = 2; i < process.argv.length; i++) {
+//   sentence += pigLatin(process.argv[i]) + ' ';
+// }
+// console.log(sentence);

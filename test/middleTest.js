@@ -25,4 +25,4 @@ describe('middle should return the middle item/items of an array', () => {
   it('returns array with middle item of given array', () => {
     assert.deepEqual(middle([1, 2, 3, 4, 5]), [3]);
   });
-})
+});
